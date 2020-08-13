@@ -1,0 +1,7 @@
+{
+  "name": "angular-ionic-cordova-plugin-sample",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
