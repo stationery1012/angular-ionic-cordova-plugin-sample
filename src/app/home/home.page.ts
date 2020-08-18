@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-declare var Battery
+declare var MyPlugin
 
 @Component({
   selector: 'app-home',
@@ -11,13 +11,14 @@ export class HomePage {
     document.addEventListener('deviceready', this.onDeviceReady, false)
   }
   onDeviceReady() {
-    Battery.status(
+    MyPlugin.status(
       (level) => {
-        alert(level) /* バッテリーの残量*/
+        alert(level) /* pluginからの戻り値 */
       },
       (err) => {
-        /* エラー */
-      }
+        alert(err) /* エラー */
+      },
+      ['HELLO!!!!!!!!!!!!!!!!']
     )
   }
 }
